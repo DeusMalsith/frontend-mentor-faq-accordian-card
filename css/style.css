@@ -1,0 +1,39 @@
+:root {
+  /* Primary colors */
+  /* Text */
+  --very-dark-desat-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+
+  /* Gradient background */
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+
+  /* Neutral colors */
+  /* Text */
+  --very-dark-gray-blue: hsl(237, 12%, 33%);
+  --dark-gray-blue: hsl(240, 6%, 50%);
+
+  /* Dividers */
+  --light-gray-blue: hsl(240, 5%, 91%);
+
+  /* ------ */
+
+  --ff-kumbh: "Kumbh Sans", sans-serif;
+  /* Use rem to scale to 12px */
+  font-size: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
