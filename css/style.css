@@ -33,13 +33,25 @@ body {
   font-size: 1.2rem;
   font-family: var(--ff-kumbh);
   background: linear-gradient(var(--soft-violet), var(--soft-blue));
+  background-attachment: fixed;
   margin: 14.8rem 2.4rem;
+}
+
+footer {
+  margin-top: 1rem;
 }
 
 h1 {
   margin-top: 3rem;
   margin-bottom: 3rem;
   font-size: 2.5em;
+}
+
+details {
+  border-bottom: 1px solid var(--light-gray-blue);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
 }
 
 .container {
@@ -53,16 +65,27 @@ h1 {
 
 .container details {
   place-self: flex-start;
+  line-height: 1.5;
 }
 
-details summary {
+.container details p {
+  padding-top: 1rem;
+  width: 36ch;
+}
+
+.container details[open] summary {
+  font-weight: 700;
+}
+
+.container details summary {
   list-style-type: none;
+  cursor: pointer;
 }
 
 .container details summary::after {
   content: url(../images/icon-arrow-down.svg);
   position: absolute;
-  right: 40px;
+  right: 50px;
 }
 
 .attribution {
