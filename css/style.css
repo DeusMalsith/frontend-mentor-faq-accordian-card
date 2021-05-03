@@ -219,6 +219,7 @@ details {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: flex-start;
     max-width: 92rem;
     padding: 7.1rem 0;
     overflow-x: hidden;
@@ -232,17 +233,22 @@ details {
     width: 36rem;
   }
 
+  .details-container {
+    overflow-y: auto;
+    height: 29.62rem;
+  }
+
+  .container details summary::after {
+    right: 15px;
+  }
+
   .container details summary:hover {
     color: var(--soft-red);
   }
 
   .woman-desktop-image {
     position: relative;
-    left: -85px;
-  }
-
-  .woman-desktop-image::before {
-    content: url(/images/illustration-box-desktop.svg);
+    left: -83px;
   }
 
   .box-position {
@@ -252,8 +258,8 @@ details {
   .box-desktop-image {
     z-index: 10;
     position: relative;
-    left: -830px;
-    top: 40px;
+    left: -820px;
+    top: 120px;
   }
 
   .woman-mobile-image {
