@@ -53,6 +53,7 @@ h1 {
   margin-bottom: 3.5rem;
   font-size: 2.6em;
   color: var(--very-dark-desat-blue);
+  text-align: center;
 }
 
 details {
@@ -67,6 +68,7 @@ details {
   flex-direction: column;
   align-items: center;
   background-color: white;
+  margin: auto;
   border-radius: 22px;
   padding: 2.4rem;
   padding-bottom: 3.4rem;
@@ -89,6 +91,7 @@ details {
 }
 
 .container details summary {
+  position: relative;
   list-style-type: none;
   cursor: pointer;
   font-size: 1.3rem;
@@ -102,7 +105,7 @@ details {
 .container details summary::after {
   content: url(../images/icon-arrow-down.svg);
   position: absolute;
-  right: 48px;
+  right: -11px;
 }
 
 .attribution {
@@ -121,6 +124,14 @@ details {
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+}
+
+.floating-reverse {
+  animation-name: floating;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: reverse;
 }
 
 .shadow-shrink {
@@ -169,7 +180,11 @@ details {
 
 /* Media Queries */
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 42rem;
+  }
+
   .woman-desktop-image {
     display: none;
   }
@@ -191,8 +206,61 @@ details {
   }
 }
 
-@media screen and (min-width: 427px) {
+@media screen and (min-width: 1025px) {
+  body {
+    margin: 12.9rem auto;
+  }
+
+  h1 {
+    text-align: left;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    max-width: 92rem;
+    padding: 7.1rem 0;
+    overflow-x: hidden;
+    background-image: url(/images/bg-pattern-desktop.svg);
+  }
+
+  .inner-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 9.5rem;
+    width: 36rem;
+  }
+
   .container details summary:hover {
     color: var(--soft-red);
+  }
+
+  .woman-desktop-image {
+    position: relative;
+    left: -85px;
+  }
+
+  .woman-desktop-image::before {
+    content: url(/images/illustration-box-desktop.svg);
+  }
+
+  .box-position {
+    position: absolute;
+  }
+
+  .box-desktop-image {
+    z-index: 10;
+    position: relative;
+    left: -830px;
+    top: 40px;
+  }
+
+  .woman-mobile-image {
+    display: none;
+  }
+
+  .bg-pattern-mobile {
+    display: none;
   }
 }
