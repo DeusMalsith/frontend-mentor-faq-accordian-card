@@ -107,6 +107,13 @@ details {
   animation-timing-function: ease-in-out;
 }
 
+.shadow-shrink {
+  animation-name: shadow-shrink;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
 .half-rotate-up[open] summary::after {
   transform: rotate(0deg);
   transition: 0.25s;
@@ -126,6 +133,18 @@ details {
   }
   100% {
     transform: translate(0, -0px);
+  }
+}
+
+@keyframes shadow-shrink {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.95);
   }
 }
 
