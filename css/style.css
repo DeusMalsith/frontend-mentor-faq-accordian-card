@@ -32,26 +32,33 @@
 body {
   font-size: 1.2rem;
   font-family: var(--ff-kumbh);
+  color: var(--dark-gray-blue);
   background: linear-gradient(var(--soft-violet), var(--soft-blue));
   background-attachment: fixed;
   margin: 14.8rem 2.4rem;
 }
 
 footer {
+  color: black;
   position: relative;
   top: 13vh;
 }
 
+footer a:any-link {
+  color: rgb(224, 224, 224);
+}
+
 h1 {
   margin-top: 3rem;
-  margin-bottom: 3rem;
-  font-size: 2.5em;
+  margin-bottom: 3.5rem;
+  font-size: 2.6em;
+  color: var(--very-dark-desat-blue);
 }
 
 details {
   border-bottom: 1px solid var(--light-gray-blue);
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
+  padding-bottom: 1.3rem;
+  margin-bottom: 1.7rem;
   width: 100%;
 }
 
@@ -60,9 +67,10 @@ details {
   flex-direction: column;
   align-items: center;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 22px;
   padding: 2.4rem;
-  box-shadow: 0px 25px 28px 0px rgb(0 0 0 / 19%);
+  padding-bottom: 3.4rem;
+  box-shadow: 0px 40px 30px -17px rgb(0 0 0 / 25%);
 }
 
 .container details {
@@ -76,6 +84,7 @@ details {
 }
 
 .container details[open] summary {
+  color: var(--very-dark-desat-blue);
   font-weight: 700;
 }
 
@@ -83,6 +92,11 @@ details {
   list-style-type: none;
   cursor: pointer;
   font-size: 1.3rem;
+  color: var(--very-dark-gray-blue);
+}
+
+.container details summary:active {
+  color: var(--soft-red);
 }
 
 .container details summary::after {
@@ -117,12 +131,12 @@ details {
 }
 
 .half-rotate-up[open] summary::after {
-  transform: rotate(0deg);
+  transform: rotate(180deg);
   transition: 0.25s;
 }
 
 .half-rotate-down summary::after {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
   transition: 0.25s;
 }
 
@@ -174,5 +188,11 @@ details {
   .bg-pattern-mobile {
     position: relative;
     margin-top: -22rem;
+  }
+}
+
+@media screen and (min-width: 427px) {
+  .container details summary:hover {
+    color: var(--soft-red);
   }
 }
