@@ -223,7 +223,7 @@ details {
     max-width: 92rem;
     padding: 7.1rem 0;
     overflow-x: hidden;
-    background-image: url(/images/bg-pattern-desktop.svg);
+    background-image: url(../images/bg-pattern-desktop.svg);
   }
 
   .inner-container {
