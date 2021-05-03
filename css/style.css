@@ -127,11 +127,10 @@ details {
 }
 
 .floating-reverse {
-  animation-name: floating;
+  animation-name: floating-reverse;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  animation-direction: reverse;
 }
 
 .shadow-shrink {
@@ -160,6 +159,18 @@ details {
   }
   100% {
     transform: translate(0, -0px);
+  }
+}
+
+@keyframes floating-reverse {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, -10px);
+  }
+  100% {
+    transform: translate(0, 0px);
   }
 }
 
@@ -213,6 +224,7 @@ details {
 
   h1 {
     text-align: left;
+    margin: auto 0;
   }
 
   .container {
@@ -224,6 +236,8 @@ details {
     padding: 7.1rem 0;
     overflow-x: hidden;
     background-image: url(../images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: -580px -296px;
   }
 
   .inner-container {
@@ -236,6 +250,11 @@ details {
   .details-container {
     overflow-y: auto;
     height: 29.62rem;
+    margin-top: 3.5rem;
+  }
+
+  .container details p {
+    max-width: 43ch;
   }
 
   .container details summary::after {
@@ -259,7 +278,8 @@ details {
     z-index: 10;
     position: relative;
     left: -820px;
-    top: 120px;
+    top: 134px;
+    filter: drop-shadow(0px 40px 30px rgba(0, 0, 0, 35%));
   }
 
   .woman-mobile-image {
