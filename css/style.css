@@ -38,7 +38,8 @@ body {
 }
 
 footer {
-  margin-top: 1rem;
+  position: relative;
+  top: 13vh;
 }
 
 h1 {
@@ -61,6 +62,7 @@ details {
   background-color: white;
   border-radius: 20px;
   padding: 2.4rem;
+  box-shadow: 0px 25px 28px 0px rgb(0 0 0 / 19%);
 }
 
 .container details {
@@ -139,12 +141,15 @@ details {
 @keyframes shadow-shrink {
   0% {
     transform: scale(0.95);
+    filter: blur(0.7px);
   }
   50% {
     transform: scale(1);
+    filter: blur(0px);
   }
   100% {
     transform: scale(0.95);
+    filter: blur(0.7px);
   }
 }
 
